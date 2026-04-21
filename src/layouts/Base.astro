@@ -8,7 +8,7 @@ interface Props {
   description?: string;
 }
 
-const { title = "Your New Business", description = "Build a social marketplace for freelance workers in the Colombia. Medellin area and give them uniform scoring system so they can be measured on the same playing field. I also create a Messaging section so they can send contracts back-and-forth, and with an integrated payment system so they can send payments back and forth for jobs and gigs, and add an event section as well, and make sure the jobs can be attached to those events" } = Astro.props;
+const { title = "Parcelab — Where Medellín's Talent Gets to Work", description = "Parcelab is the first social marketplace for Medellín freelancers. Fair scoring, secure contracts, event gigs, and integrated payments — all in one place." } = Astro.props;
 ---
 <!doctype html>
 <html lang="en" class="scroll-smooth">
@@ -23,13 +23,14 @@ const { title = "Your New Business", description = "Build a social marketplace f
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Your New Business",
-      "description": "Build a social marketplace for freelance workers in the Colombia. Medellin area and give them uniform scoring system so they can be measured on the same playing field. I also create a Messaging section so they can send contracts back-and-forth, and with an integrated payment system so they can send payments back and forth for jobs and gigs, and add an event section as well, and make sure the jobs can be attached to those events",
-      "url": "https://colombia-freelance-marketplace.onrender.com"
+      "name": "Parcelab",
+      "description": "Parcelab is the first social marketplace for Medellín freelancers. Fair scoring, secure contracts, event gigs, and integrated payments — all in one place.",
+      "url": "https://colombia-freelance-marketplace.onrender.com",
+      "foundingLocation": "Medellín, Colombia"
     }
     </script>
   </head>
-  <body class="min-h-screen flex flex-col bg-surface-50 text-surface-900 font-body antialiased">
+  <body class="min-h-screen flex flex-col bg-surface-50 text-surface-950 font-body antialiased">
     <Header />
     <main class="flex-1">
       <slot />

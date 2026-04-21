@@ -1,35 +1,462 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Your New Business" description="Build a social marketplace for freelance workers in the Colombia. Medellin area and give them uniform scoring system so they can be measured on the same playing field. I also create a Messaging section so they can send contracts back-and-forth, and with an integrated payment system so they can send payments back and forth for jobs and gigs, and add an event section as well, and make sure the jobs can be attached to those events">
-  <!-- Hero — the Product Agent will replace this entire page -->
-  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 via-surface-50 to-brand-500/10"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-surface-900 font-display max-w-4xl mx-auto leading-[1.1] animate-slide-up">
-        Your New Business
+
+<Base
+  title="Parcelab — Where Medellín's Talent Gets to Work"
+  description="Parcelab is the first social marketplace for Medellín freelancers. Fair scoring, secure contracts, integrated payments, and live event gigs — all in one place."
+>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HERO — Dark canvas, warm firelight gradients, noise texture
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="hero-section relative min-h-screen flex flex-col justify-center overflow-hidden">
+
+    <!-- Layered gradient background -->
+    <div class="hero-bg absolute inset-0" aria-hidden="true"></div>
+    <!-- Noise texture overlay -->
+    <div class="hero-noise absolute inset-0" aria-hidden="true"></div>
+
+    <!-- City skyline silhouette at bottom -->
+    <div class="absolute bottom-0 left-0 right-0 h-40 city-skyline" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 pt-28 pb-40">
+      <!-- Eyebrow -->
+      <div class="flex items-center gap-3 mb-8 animate-slide-up">
+        <span class="inline-flex items-center gap-2 bg-brand-500/15 border border-brand-500/30 text-brand-400 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse-glow inline-block"></span>
+          Medellín Freelance Marketplace
+        </span>
+      </div>
+
+      <!-- Hero headline — bold-display, dramatic scale -->
+      <h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight text-surface-950 max-w-4xl animate-slide-up delay-100">
+        Tu reputación.<br/>
+        <span class="text-brand-500">Tu ciudad.</span><br/>
+        Tu gig empieza aquí.
       </h1>
-      <p class="mt-6 text-lg md:text-xl text-surface-800/60 max-w-2xl mx-auto leading-relaxed animate-slide-up delay-100">
-        Build a social marketplace for freelance workers in the Colombia. Medellin area and give them uniform scoring system so they can be measured on the same playing field. I also create a Messaging section so they can send contracts back-and-forth, and with an integrated payment system so they can send payments back and forth for jobs and gigs, and add an event section as well, and make sure the jobs can be attached to those events
+
+      <p class="mt-8 text-lg sm:text-xl text-surface-800 max-w-xl leading-relaxed animate-slide-up delay-200">
+        Parcelab gives Medellín freelancers a fair scoring system, secure contracts, event gigs, and integrated payments — all in one place.
       </p>
-      <div class="mt-10 animate-slide-up delay-200">
-        <a href="#cta" class="inline-block px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-base">
-          Get Started
+
+      <!-- CTA cluster -->
+      <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 animate-slide-up delay-300">
+        <a
+          href="#join"
+          class="group inline-flex items-center gap-3 bg-brand-500 hover:bg-brand-400 text-white font-semibold text-base px-7 py-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-brand-500/30"
+        >
+          Crear mi perfil gratis
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
         </a>
+        <a
+          href="#how-it-works"
+          class="inline-flex items-center gap-2 text-surface-900 hover:text-surface-950 font-medium text-sm transition-colors"
+        >
+          <span class="underline underline-offset-4 decoration-surface-400">Ver cómo funciona</span>
+        </a>
+      </div>
+
+      <!-- Micro-proof -->
+      <p class="mt-5 text-xs text-surface-800 animate-fade-in delay-400">
+        Sin tarjeta de crédito · Únete gratis · Solo para Medellín
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       COMMUNITY STATS — Giant numbers, city energy
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="relative bg-surface-100 py-20 overflow-hidden">
+    <!-- Diagonal top cut -->
+    <div class="stats-top-cut absolute top-0 left-0 right-0 h-16 bg-surface-50" aria-hidden="true"></div>
+
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-10">
+      <p class="text-center text-xs font-semibold tracking-widest uppercase text-surface-800 mb-14 animate-fade-in">
+        La comunidad que mueve a Medellín
+      </p>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-surface-300 rounded-2xl overflow-hidden">
+        <!-- Stat 1 -->
+        <div class="stat-card bg-surface-100 px-8 py-10 text-center animate-count-up">
+          <p class="font-display text-5xl sm:text-6xl text-brand-500 leading-none">4,200+</p>
+          <p class="mt-3 text-sm text-surface-900 font-medium">Freelancers activos</p>
+        </div>
+        <!-- Stat 2 -->
+        <div class="stat-card bg-surface-100 px-8 py-10 text-center animate-count-up delay-100">
+          <p class="font-display text-5xl sm:text-6xl text-brand-500 leading-none">18K+</p>
+          <p class="mt-3 text-sm text-surface-900 font-medium">Gigs completados</p>
+        </div>
+        <!-- Stat 3 -->
+        <div class="stat-card bg-surface-100 px-8 py-10 text-center animate-count-up delay-200">
+          <p class="font-display text-5xl sm:text-6xl text-accent-500 leading-none">320+</p>
+          <p class="mt-3 text-sm text-surface-900 font-medium">Eventos con gigs activos</p>
+        </div>
+        <!-- Stat 4 -->
+        <div class="stat-card bg-surface-100 px-8 py-10 text-center animate-count-up delay-300">
+          <p class="font-display text-5xl sm:text-6xl text-accent-500 leading-none">98%</p>
+          <p class="mt-3 text-sm text-surface-900 font-medium">Pagos a tiempo</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="py-20 md:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl bg-brand-500 p-10 md:p-16 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white font-display">Ready to get started?</h2>
-        <p class="mt-4 text-lg text-white/80 max-w-xl mx-auto">Get in touch and see what we can do for you.</p>
-        <a href="mailto:hello@example.com" class="mt-8 inline-block px-8 py-3.5 bg-white text-surface-900 font-semibold rounded-lg hover:bg-surface-100 transition-colors text-base">
-          Contact Us
-        </a>
+  <!-- ═══════════════════════════════════════════════════════════════
+       HOW IT WORKS — 3 Steps
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="how-it-works" class="relative bg-surface-50 py-28 overflow-hidden">
+    <!-- Background glow accent -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-brand-500/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+    <div class="relative max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="mb-16">
+        <h2 class="section-heading font-display text-4xl sm:text-5xl text-surface-950 uppercase tracking-tight">
+          Cómo funciona
+        </h2>
+        <p class="mt-4 text-surface-800 max-w-lg">
+          De perfil a pago en minutos. Sin complicaciones, sin tramitología.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Step 1 -->
+        <div class="step-card relative bg-surface-200 rounded-2xl p-8 border border-surface-300 hover:border-brand-500/40 transition-colors group animate-slide-up">
+          <div class="step-number font-display text-7xl text-brand-500/15 leading-none select-none absolute top-4 right-6">01</div>
+          <div class="w-12 h-12 rounded-xl bg-accent-500/15 border border-accent-500/30 flex items-center justify-center mb-6">
+            <!-- User icon -->
+            <svg class="w-6 h-6 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl text-surface-950 mb-3">Crea tu perfil</h3>
+          <p class="text-surface-800 text-sm leading-relaxed">
+            Regístrate, agrega tus habilidades y tu historial. Tu Parce Score se construye desde el primer gig completado.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card relative bg-surface-200 rounded-2xl p-8 border border-surface-300 hover:border-brand-500/40 transition-colors group animate-slide-up delay-100">
+          <div class="step-number font-display text-7xl text-brand-500/15 leading-none select-none absolute top-4 right-6">02</div>
+          <div class="w-12 h-12 rounded-xl bg-brand-500/15 border border-brand-500/30 flex items-center justify-center mb-6">
+            <!-- Briefcase icon -->
+            <svg class="w-6 h-6 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl text-surface-950 mb-3">Consigue el gig</h3>
+          <p class="text-surface-800 text-sm leading-relaxed">
+            Aplica a trabajos locales o conecta con eventos en la ciudad. Negocia condiciones y firma contratos digitales desde la app.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card relative bg-surface-200 rounded-2xl p-8 border border-surface-300 hover:border-brand-500/40 transition-colors group animate-slide-up delay-200">
+          <div class="step-number font-display text-7xl text-brand-500/15 leading-none select-none absolute top-4 right-6">03</div>
+          <div class="w-12 h-12 rounded-xl bg-accent-500/15 border border-accent-500/30 flex items-center justify-center mb-6">
+            <!-- Payment icon -->
+            <svg class="w-6 h-6 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+              <line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl text-surface-950 mb-3">Recibe tu pago</h3>
+          <p class="text-surface-800 text-sm leading-relaxed">
+            Pagos integrados, seguros y rápidos. Sin terceros externos. Tu dinero en tu cuenta, sin demoras.
+          </p>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FEATURES — 4 pillars, alternating warm accents
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="features" class="relative bg-surface-100 py-28 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+
+      <div class="mb-16">
+        <h2 class="section-heading font-display text-4xl sm:text-5xl text-surface-950 uppercase tracking-tight">
+          Todo lo que necesitas
+        </h2>
+        <p class="mt-4 text-surface-800 max-w-lg">
+          Cuatro pilares que hacen de Parcelab el lugar de trabajo que Medellín merecía.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <!-- Feature 1: Parce Score -->
+        <div class="feature-card bg-surface-50 rounded-2xl p-8 border border-surface-300 animate-slide-up">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-brand-500/20 border border-brand-500/30 flex items-center justify-center">
+              <svg class="w-7 h-7 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display text-xl text-surface-950 mb-2">Parce Score</h3>
+              <p class="text-surface-800 text-sm leading-relaxed">
+                El primer sistema de puntuación justo y estandarizado para freelancers colombianos. Tu reputación es tuya — se mide por resultados reales, no por favoritismos.
+              </p>
+              <div class="mt-4 flex items-center gap-2">
+                <span class="px-3 py-1 bg-brand-500/15 text-brand-400 text-xs font-semibold rounded-full">Scoring justo</span>
+                <span class="px-3 py-1 bg-brand-500/15 text-brand-400 text-xs font-semibold rounded-full">Transparente</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2: Contratos digitales -->
+        <div class="feature-card bg-surface-50 rounded-2xl p-8 border border-surface-300 animate-slide-up delay-100">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-accent-500/20 border border-accent-500/30 flex items-center justify-center">
+              <svg class="w-7 h-7 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display text-xl text-surface-950 mb-2">Contratos digitales</h3>
+              <p class="text-surface-800 text-sm leading-relaxed">
+                Envía, negocia y firma contratos directamente en la plataforma. Sin correos de ida y vuelta. Cada acuerdo queda registrado y protegido.
+              </p>
+              <div class="mt-4 flex items-center gap-2">
+                <span class="px-3 py-1 bg-accent-500/15 text-accent-600 text-xs font-semibold rounded-full">Firma digital</span>
+                <span class="px-3 py-1 bg-accent-500/15 text-accent-600 text-xs font-semibold rounded-full">Historial seguro</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3: Pagos integrados -->
+        <div class="feature-card bg-surface-50 rounded-2xl p-8 border border-surface-300 animate-slide-up delay-200">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-brand-500/20 border border-brand-500/30 flex items-center justify-center">
+              <svg class="w-7 h-7 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display text-xl text-surface-950 mb-2">Pagos integrados</h3>
+              <p class="text-surface-800 text-sm leading-relaxed">
+                Cobra y paga dentro de Parcelab. Sin comisiones ocultas. Soporte para transferencias locales, pagos por hitos y facturación automática.
+              </p>
+              <div class="mt-4 flex items-center gap-2">
+                <span class="px-3 py-1 bg-brand-500/15 text-brand-400 text-xs font-semibold rounded-full">Sin comisiones ocultas</span>
+                <span class="px-3 py-1 bg-brand-500/15 text-brand-400 text-xs font-semibold rounded-full">Pagos locales</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4: Eventos y gigs -->
+        <div class="feature-card bg-surface-50 rounded-2xl p-8 border border-surface-300 animate-slide-up delay-300">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-accent-500/20 border border-accent-500/30 flex items-center justify-center">
+              <svg class="w-7 h-7 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display text-xl text-surface-950 mb-2">Hub de Eventos</h3>
+              <p class="text-surface-800 text-sm leading-relaxed">
+                Cada evento de Medellín puede publicar sus gigs disponibles. Fotógrafos, sonidistas, diseñadores y más — los organizadores encuentran al talento correcto, cuando lo necesitan.
+              </p>
+              <div class="mt-4 flex items-center gap-2">
+                <span class="px-3 py-1 bg-accent-500/15 text-accent-600 text-xs font-semibold rounded-full">Gigs por evento</span>
+                <span class="px-3 py-1 bg-accent-500/15 text-accent-600 text-xs font-semibold rounded-full">Reserva rápida</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       MEMBER SPOTLIGHT — Testimonial quote
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="relative bg-surface-50 py-24 overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-0 left-0 w-96 h-96 rounded-full bg-brand-500/6 blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-accent-500/5 blur-3xl translate-x-1/4 translate-y-1/4"></div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
+      <p class="text-xs font-semibold tracking-widest uppercase text-surface-800 mb-10">Desde la comunidad</p>
+
+      <!-- Giant quote mark -->
+      <div class="font-display text-9xl text-brand-500/20 leading-none select-none -mb-8" aria-hidden="true">"</div>
+
+      <blockquote class="font-display text-2xl sm:text-3xl md:text-4xl text-surface-950 leading-snug tracking-tight animate-fade-in">
+        Antes me pedían referencias por WhatsApp. Ahora mi Parce Score habla por mí — conseguí 3 contratos en mi primera semana.
+      </blockquote>
+
+      <div class="mt-10 flex items-center justify-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-brand-500/20 border-2 border-brand-500/40 flex items-center justify-center text-brand-400 font-display text-lg">
+          S
+        </div>
+        <div class="text-left">
+          <p class="text-surface-950 font-semibold text-sm">Santiago Restrepo</p>
+          <p class="text-surface-800 text-xs">Diseñador UX · Medellín · Parce Score 94</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       CATEGORIES — Who Parcelab is for
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="bg-surface-100 py-24">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="mb-14">
+        <h2 class="section-heading font-display text-4xl sm:text-5xl text-surface-950 uppercase tracking-tight">
+          ¿Cuál es tu perfil?
+        </h2>
+        <p class="mt-4 text-surface-800 max-w-md">
+          Parcelab funciona para todo el talento que mueve a Medellín.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        {[
+          { icon: "🎨", label: "Diseño & Creatividad" },
+          { icon: "💻", label: "Tecnología" },
+          { icon: "📸", label: "Foto & Video" },
+          { icon: "🎵", label: "Eventos & Música" },
+          { icon: "📝", label: "Redacción" },
+          { icon: "🔧", label: "Servicios Técnicos" },
+        ].map((cat) => (
+          <div class="category-pill flex flex-col items-center gap-3 bg-surface-200 border border-surface-300 hover:border-brand-500/50 rounded-xl p-5 text-center cursor-pointer transition-all duration-200 hover:bg-surface-200/80 group">
+            <span class="text-3xl">{cat.icon}</span>
+            <span class="text-xs text-surface-900 font-medium leading-tight group-hover:text-surface-950 transition-colors">{cat.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       JOIN CTA — Dark, warm red hero energy
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="join" class="relative overflow-hidden">
+    <!-- Warm CTA background -->
+    <div class="cta-bg absolute inset-0" aria-hidden="true"></div>
+    <div class="cta-noise absolute inset-0" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 py-28 text-center">
+      <span class="inline-block text-accent-500 text-xs font-semibold tracking-widest uppercase mb-6">Únete ahora — es gratis</span>
+
+      <h2 class="font-display text-4xl sm:text-5xl md:text-6xl text-surface-950 uppercase tracking-tight leading-none mb-6">
+        Medellín te está<br/>
+        <span class="text-brand-500">esperando.</span>
+      </h2>
+
+      <p class="text-surface-800 text-lg max-w-lg mx-auto mb-10">
+        Crea tu perfil hoy, construye tu reputación con cada gig, y cobra directo desde la plataforma. Tu ciudad, tu comunidad, tu carrera.
+      </p>
+
+      <!-- Email capture -->
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4" action="#" method="post">
+        <input
+          type="email"
+          placeholder="tu@correo.com"
+          class="flex-1 px-5 py-4 bg-surface-200 border border-surface-300 text-surface-950 placeholder-surface-800 rounded-xl text-sm focus:outline-none focus:border-brand-500 transition-colors"
+          required
+        />
+        <button
+          type="submit"
+          class="px-7 py-4 bg-brand-500 hover:bg-brand-400 text-white font-semibold text-sm rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-brand-500/30 whitespace-nowrap"
+        >
+          Crear mi cuenta
+        </button>
+      </form>
+      <p class="text-xs text-surface-800">Sin spam. Sin tarjeta. Solo para parces de Medellín.</p>
+    </div>
+  </section>
+
 </Base>
+
+<style>
+  /* ── Hero Background ───────────────────────────────────────────── */
+  .hero-section {
+    background-color: oklch(0.13 0.030 260);
+  }
+
+  .hero-bg {
+    background:
+      radial-gradient(ellipse 70% 55% at 12% 30%, oklch(0.56 0.19 28 / 0.22) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 45% at 88% 75%, oklch(0.83 0.17 88 / 0.10) 0%, transparent 65%),
+      radial-gradient(ellipse 90% 60% at 50% 100%, oklch(0.56 0.19 28 / 0.08) 0%, transparent 60%),
+      linear-gradient(175deg, oklch(0.13 0.030 260) 0%, oklch(0.11 0.025 260) 100%);
+  }
+
+  .hero-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  /* City skyline SVG silhouette */
+  .city-skyline {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 160' preserveAspectRatio='none'%3E%3Cpath d='M0,160 L0,100 L40,100 L40,80 L60,80 L60,60 L80,60 L80,80 L100,80 L100,50 L110,50 L110,40 L120,40 L120,50 L130,50 L130,100 L160,100 L160,70 L180,70 L180,55 L195,55 L195,70 L210,70 L210,40 L225,40 L225,20 L235,20 L235,40 L250,40 L250,70 L280,70 L280,90 L310,90 L310,65 L325,65 L325,45 L340,45 L340,65 L360,65 L360,90 L400,90 L400,60 L420,60 L420,45 L435,45 L435,30 L450,30 L450,45 L465,45 L465,60 L500,60 L500,85 L540,85 L540,70 L555,70 L555,55 L570,55 L570,70 L590,70 L590,85 L630,85 L630,65 L650,65 L650,50 L665,50 L665,65 L680,65 L680,85 L720,85 L720,60 L740,60 L740,40 L755,40 L755,25 L770,25 L770,40 L790,40 L790,60 L830,60 L830,80 L860,80 L860,55 L875,55 L875,80 L910,80 L910,65 L930,65 L930,80 L970,80 L970,95 L1000,95 L1000,70 L1020,70 L1020,50 L1035,50 L1035,70 L1055,70 L1055,95 L1090,95 L1090,75 L1110,75 L1110,60 L1125,60 L1125,75 L1145,75 L1145,95 L1180,95 L1180,70 L1200,70 L1200,55 L1215,55 L1215,40 L1230,40 L1230,55 L1250,55 L1250,70 L1280,70 L1280,90 L1310,90 L1310,75 L1330,75 L1330,90 L1360,90 L1360,105 L1400,105 L1400,95 L1440,95 L1440,160 Z' fill='oklch(0.16 0.028 260 / 0.8)'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  /* ── Section headings with red underline accent ─────────────────── */
+  .section-heading {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+  .section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3rem;
+    height: 3px;
+    background: oklch(0.56 0.19 28);
+    border-radius: 2px;
+  }
+
+  /* ── Stats section diagonal cut ─────────────────────────────────── */
+  .stats-top-cut {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
+  }
+
+  /* ── CTA background ──────────────────────────────────────────────── */
+  .cta-bg {
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 40%, oklch(0.56 0.19 28 / 0.25) 0%, transparent 65%),
+      radial-gradient(ellipse 60% 50% at 85% 70%, oklch(0.83 0.17 88 / 0.10) 0%, transparent 60%),
+      linear-gradient(170deg, oklch(0.13 0.030 260) 0%, oklch(0.10 0.022 260) 100%);
+  }
+
+  .cta-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  /* ── Hover glow on feature/step cards ───────────────────────────── */
+  .feature-card, .step-card {
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .feature-card:hover, .step-card:hover {
+    transform: translateY(-2px);
+  }
+</style>
