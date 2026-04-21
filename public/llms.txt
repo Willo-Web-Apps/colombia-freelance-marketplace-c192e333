@@ -1,0 +1,20 @@
+# Your New Business
+
+> URL: https://colombia-freelance-marketplace.onrender.com
+
+> Build a social marketplace for freelance workers in the Colombia. Medellin area and give them uniform scoring system so they can be measured on the same playing field. I also create a Messaging section so they can send contracts back-and-forth, and with an integrated payment system so they can send payments back and forth for jobs and gigs, and add an event section as well, and make sure the jobs can be attached to those events
+
+## About
+
+Your New Business is an AI-powered business. This file provides a brief overview for
+language model crawlers and AI assistants.
+
+## Pages
+
+- /: Home — learn about Your New Business and get started
+- /blog: Blog — articles, updates, and insights
+- /blog/[slug]: Individual blog posts
+
+## Contact
+
+For inquiries, please visit our website.
